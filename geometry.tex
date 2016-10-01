@@ -1,0 +1,107 @@
+% !TEX spellcheck = en_US
+\documentclass[letter,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tkz-euclide} 
+\usetkzobj{all} 
+
+\pagestyle{myheadings}
+\markright{\hfill \textup{Maluff} }
+\headsep 0.3in
+\topmargin -0.3in
+\textheight 9in
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+\doublespacing
+\begin{document}
+
+\begin{singlespace}
+\noindent MATH \#\#\#: Geometry
+
+\noindent Prof. Name Lastname
+
+\noindent Mauricio Maluff Masi
+
+\noindent 04/24/2013
+\end{singlespace}
+{\centering
+\large{\textbf{Title}}
+
+}
+\vspace{12pt}
+
+\noindent\textbf{1.} Give detailed instructions on how to construct a pentagon, using Euclid’s construction axioms. Be sure to explain your work at each stage.\\
+
+Take any two points A and B. Draw the perpendicular bisector by the double-arc method, and call the midpoint O. Draw a circle with center O and radius OA.
+
+\vspace{-20pt}
+
+
+{\centering
+    \begin{tikzpicture}[scale=4.0,cap=round,>=latex]
+	\def\ptsize{0.6pt}
+
+	\draw[thick] (0cm,0cm) circle(1cm);
+	\draw[thick] (-1cm,0cm) -- (1cm,0cm);
+	\draw[thick] (0cm,-1.2cm) -- (0cm,1.2cm);
+
+
+	\coordinate (A) at (-1cm,0cm);
+	\coordinate (B) at (1cm,0cm);
+	\coordinate (M) at (0cm,1cm);
+	\coordinate (O) at (0cm,0cm);
+
+	\tkzShowLine[mediator, size=1, gap=1.2](A,B)
+
+	\coordinate[label=left:A] (A)  at (A);
+	\coordinate[label=right:B] (B)  at (B);
+	\coordinate[label=above right:M] (M)  at (M);
+	\coordinate[label=above right:O] (O)  at (O);
+
+
+	\foreach \p in {A,B,M,O}
+		\fill (\p) circle (\ptsize);
+
+
+    \end{tikzpicture}
+
+}
+
+
+
+Then take the midpoint N of MO by the familiar method, and draw the line BN. Draw the angle bisector of $\widehat{\text{BNO}}$, and call D the intersection between the bisector and BO.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
