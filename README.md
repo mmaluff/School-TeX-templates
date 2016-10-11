@@ -3,6 +3,9 @@ A number of TeX templates I made for college. Excuse the lack of comments on mos
 
 ## Sample pics
 
+###CS.tex
+![CS.tex](/sample-pics/CS.png?raw=true "CS.tex")
+
 ###french.tex
 ![french.tex](/sample-pics/french.png?raw=true "The sample text is from Twenty Thousand Leagues Under the Sea")
 

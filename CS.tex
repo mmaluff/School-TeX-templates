@@ -1,0 +1,64 @@
+% !TEX spellcheck = en_US
+\documentclass[letter,12pt]{article}
+
+%Packages
+\usepackage{fullpage} % Nicer margins
+\usepackage[svgnames]{xcolor} % Colors
+\usepackage{minted} % Code syntax highlighting
+\usepackage{enumitem} % Fancy enumerations
+\usepackage{fontspec} % Fancy fonts
+
+% Make my code look nice
+\setmonofont{Ubuntu Mono}
+\usemintedstyle{xcode} % Pick the style for minted syntax highlighting
+\definecolor{bg}{gray}{0.95} % Background color for minted
+\newminted{java}{bgcolor=bg,linenos} % Default options for Java (use javacode environment to take advantage of it)
+\newcommand{\code}{\mintinline{java}} % Use \code{} for inline Java
+
+
+% Header
+\pagestyle{myheadings}
+\markright{\hfill \textup{Maluff} }
+\headsep 0.3in
+\topmargin -0.3in
+\textheight 9in
+
+\begin{document}
+
+\noindent CS \#\#\#: Class Name
+
+\noindent Prof. Firstname Lastname
+
+\noindent Mauricio Maluff Masi
+
+\noindent 09/30/2016
+
+{\centering
+\large{\textbf{Homework 1}}
+
+}
+\vspace{12pt}
+\noindent\textbf{Question 1:} Consider the following code fragment that is intended to remove every other item from a \code{List<String>} object. For example, given the list \code{[ "Ben", "Beck", "Eric",}
+\code{"Vidya", "Jason", "Xiaoming" ]} it should remove \code{"Ben"}, \code{"Eric"}, and \code{"Jason"} and leave the list as just \code{[ "Beck", "Vidya", "Xiaoming" ]}.
+
+\begin{javacode}
+for (int i = 0; i < words.size(); i += 2) {
+    words.remove(i); 
+} 
+\end{javacode}
+
+\begin{enumerate}[label=\emph{\Alph*}.]
+	\item First question
+	\item Second question
+	\item etc.
+\end{enumerate}
+
+\noindent\textbf{Answers}
+\begin{enumerate}[label=\emph{\Alph*}.]
+	\item First answer
+	\item Second answer
+	\item etc.
+
+\end{enumerate}
+
+\end{document}
