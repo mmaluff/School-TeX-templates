@@ -9,11 +9,20 @@
 \usepackage{fontspec} % Fancy fonts
 
 % Make my code look nice
+
+% Set font used or code
 \setmonofont{Ubuntu Mono}
-\usemintedstyle{xcode} % Pick the style for minted syntax highlighting
-\definecolor{bg}{gray}{0.95} % Background color for minted
-\newminted{java}{bgcolor=bg,linenos} % Default options for Java (use javacode environment to take advantage of it)
-\newcommand{\code}{\mintinline{java}} % Use \code{} for inline Java
+% Pick the style for minted syntax highlighting
+\usemintedstyle{xcode}
+% Background color for minted
+\definecolor{bg}{gray}{0.95}
+% Default options for Java (use javacode environment to take advantage of it)
+\newminted{java}{bgcolor=bg,linenos}
+% Use \code{} for inline Java
+\newcommand{\code}{\mintinline{java}}
+% Add spaces around code blocks
+\BeforeBeginEnvironment{minted}{\medskip}
+\AfterEndEnvironment{minted}{\medskip}
 
 
 % Header
@@ -58,7 +67,6 @@ for (int i = 0; i < words.size(); i += 2) {
 	\item First answer
 	\item Second answer
 	\item etc.
-
 \end{enumerate}
 
 \end{document}
