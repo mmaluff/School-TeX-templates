@@ -1,6 +1,10 @@
 # school-TeX-templates
 A number of TeX templates I made for college. Excuse the lack of comments on most of these, I was young and stupid.
 
+Most of these can be compiled using pdfLaTeX with no special flags.
+
+CS.tex requires XeLaTeX or LuaLaTeX (for the fontspec package) with the -shell-escape flag (for the minted package).
+
 ## Sample pics
 
 ###CS.tex
